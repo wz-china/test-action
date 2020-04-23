@@ -10,6 +10,7 @@ module.exports={
     filename:"[name].bundle.js",
     path: path.resolve(__dirname,"dist")
   },
+
   resolve: {
     extensions: [".vue",".js"]
   },
@@ -29,6 +30,27 @@ module.exports={
         use:[
           'style-loader',
           "css-loader"
+        ]
+      },
+      {
+        test:/\.(jpg|png)/,
+        use:[
+          {
+            loader:"url-loader",
+            options: {
+              limit:10 *1024,
+              name:"[name].[ext]",
+              outputPath:"public/image"
+            }
+          }
+        ]
+      },
+      {
+        test:/\.(ttf|woff|woff2|eot|svg)/,
+        use:[
+          {loader:"file-loader", options: {
+            outputPath:"public/font"
+          }}
         ]
       }
     ]

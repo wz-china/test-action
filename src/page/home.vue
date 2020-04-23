@@ -1,12 +1,9 @@
 <template>
-    <div>
-        <router-view></router-view>
-    </div>
+    <div>hell oowlrd</div>
 </template>
-
 <script>
   export default {
-    name: "app",
+    name: "home",
     data() {
       return {}
     },
