@@ -4,7 +4,7 @@ import router from "./route"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 // import D2Crud from '@d2-projects/d2-crud'
-import D2Crud from '../table/dist/d2-crud'
+import D2Crud from '../wz-crud/dist/d2-crud'
 
 Vue.config.productionTip = false
 
